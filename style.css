@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+body {
+    background-image: url('Images/bg1.png'); /* Path to your background image */
+    background-size: cover; /* Ensure the image covers the whole screen */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    height: 100vh; /* Make the background image take the full viewport height */
+    margin: 0; /* Remove default body margin */
+    font-family: Arial, sans-serif; /* Font style for the page */
+}
+
+h1 {
+    background-color: #243642;
+    color: white;
+    height: 5rem;
+    line-height: 5rem;
+    position: relative; /* Set position for z-index */
+    z-index: 2; /* Make sure the heading is above the overlay */
+}
+
+.choice {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice:hover {
+    background-color: #537791;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.choices {
+    margin-top: 5rem;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;  
+}
+
+.score-board {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    gap: 5rem;
+    position: relative; /* Set position for z-index */
+    z-index: 2; /* Make sure the scoreboard is above the overlay */
+}
+
+#user-score, #comp-score {
+    font-size: 5rem;
+}
+
+.msg-container {
+    margin-top: 5rem;
+    position: relative; /* Set position for z-index */
+    z-index: 2; /* Make sure the message is above the overlay */
+}
+
+#msg {
+    display: inline;
+    font-size: 2rem;
+    background-color: #243642;
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.overlay {
+    position: fixed; /* Fixed to the viewport */
+    top: 0; /* Start from the top */
+    left: 0; /* Stretch to the left */
+    right: 0; /* Stretch to the right */
+    bottom: 0; /* Stretch to the bottom */
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: 1; /* Place it below the content but above the background */
+    pointer-events: none; /* Allow clicks to pass through */
+}
